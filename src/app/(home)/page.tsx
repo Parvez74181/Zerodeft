@@ -2,14 +2,15 @@ import Button from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import HeroBG from "../../../public/hero-bg.svg";
-import LottiePlayer from "@/components/LottiePlayer";
+import Reveal from "@/components/animated/Reveal";
+import TextHoverShift from "@/components/animated/TextHoverShift";
+import AvatarGroup from "@/components/ui/AvatarGroup";
 
 export default function Home() {
   return (
     <>
       <div className="flex min-h-[70vh] md:flex-row flex-col w-full gap-3 md:pt-0 pt-5 md:justify-between items-center">
         <div className="w-full md:w-1/2 relative h-full flex justify-center items-center md:items-start flex-col gap-3">
-          {/* <Image src={HeroBG} alt="hero-bg" className="absolute w-full object-contain" width={500} height={500} /> */}
           <h1
             className={cn(
               "bg-gradient-to-l text-transparent dark:text-transparent bg-clip-text animate-text-gradient font-bold dark:bg-zinc-50 bg-[length:300%] text-lg rounded-xl tracking-wide duration-[4200ms]",
@@ -20,11 +21,35 @@ export default function Home() {
             let’s create the next world changing thing!
           </h1>
 
-          <Button className="bg-amber-300 uppercase font-medium md:w-32 w-36 fade-in-left">Let's Talk</Button>
+          <Button className="bg-amber-300 uppercase font-medium md:w-32 w-36 fade-in-left">
+            <TextHoverShift text="Let's Talk" />
+          </Button>
         </div>
 
         <div className="w-full md:w-1/2 relative h-full flex justify-center items-start flex-col">
-          <Image src={HeroBG} alt="hero-bg" className="w-full object-contain animate-float" width={500} height={500} />
+          <Reveal>
+            <Image
+              src={HeroBG}
+              alt="hero-bg"
+              className="w-full object-contain animate-float"
+              width={500}
+              height={500}
+            />
+          </Reveal>
+        </div>
+      </div>
+
+      <div className=" flex md:flex-row flex-col w-full gap-5 md:pt-0 pt-5 md:justify-center items-center">
+        <Reveal className="w-full md:w-1/3 md:order-1 order-2 flex justify-center items-center p-5">
+          <AvatarGroup />
+        </Reveal>
+
+        <div className="w-full md:w-2/3 md:order-2 order-1">
+          <h2 className="text-2xl md:text-4xl font-semibold">
+            <span className="md:w-44 inline-block"></span>Over the years, we’ve honed our skills in design and
+            development, and now we’re excited to help passionate founders like you bring your vision to life. After
+            all, success is a team effort. Let’s work together and aim for the top!
+          </h2>
         </div>
       </div>
     </>

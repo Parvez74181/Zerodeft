@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Questrial } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import Scroll from "./Scroll";
 
 const questrial = Questrial({
   variable: "--font-questrial",
@@ -22,6 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${questrial.variable} dark font-questrial min-h-[100vh] bg-dark-1 text-white antialiased`}>
+        <Scroll />
         <main className="container mx-auto px-3 md:px-0">
           <Navbar />
           {children}

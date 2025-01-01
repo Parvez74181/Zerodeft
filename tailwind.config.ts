@@ -8,6 +8,9 @@ export default {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
     "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
   ],
+  fontFamily: {
+    questrial: "var(--font-questrial)",
+  },
   theme: {
     extend: {
       colors: {
@@ -20,9 +23,7 @@ export default {
         "dark-blue-1": "#2C277D",
         "dark-blue-2": "#534CB2",
       },
-      fontFamily: {
-        questrial: "var(--font-questrial)",
-      },
+
       animation: {
         "text-gradient": "text-gradient 6s ease infinite alternate",
         "bg-shine": "bg-shine 2.1s linear infinite",

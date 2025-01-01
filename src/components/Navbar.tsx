@@ -6,7 +6,6 @@ import {
   NavbarBrand,
   NavbarContent,
   NavbarItem,
-  Link,
   DropdownItem,
   DropdownTrigger,
   Dropdown,
@@ -18,6 +17,8 @@ import {
 } from "@nextui-org/react";
 import Button from "./ui/Button";
 import { useState } from "react";
+import TextHoverShift from "./animated/TextHoverShift";
+import Link from "next/link";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -29,7 +30,6 @@ const Navbar = () => {
   return (
     <NavbarUI
       isBordered
-      isBlurred={false}
       shouldHideOnScroll
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
@@ -39,16 +39,26 @@ const Navbar = () => {
         <NavbarMenuToggle aria-label={isMenuOpen ? "Close menu" : "Open menu"} />
       </NavbarContent>
 
+      {/* small device logo */}
       <NavbarContent className="sm:hidden pr-3" justify="center">
         <NavbarBrand>
-          <p className="font-bold text-inherit">ACME</p>
+          <Link href="/" className="font-bold text-inherit">
+            ACME
+          </Link>
         </NavbarBrand>
       </NavbarContent>
 
-      <NavbarContent className="hidden sm:flex gap-4" justify="center">
+      {/* large device logo */}
+      <NavbarContent className="hidden sm:flex gap-4" justify="start">
         <NavbarBrand>
-          <p className="font-bold text-inherit">ACME</p>
+          <Link href="/" className="font-bold text-inherit">
+            ACME
+          </Link>
         </NavbarBrand>
+      </NavbarContent>
+
+      {/* large device menus */}
+      <NavbarContent className="hidden sm:flex gap-4" justify="center">
         {/* services dropdown */}
 
         <Dropdown className="bg-dark/70 backdrop-blur-lg">
@@ -61,7 +71,7 @@ const Navbar = () => {
                 radius="sm"
                 variant="solid"
               >
-                Services
+                <TextHoverShift text="Services" />
               </DropDownButton>
             </DropdownTrigger>
           </NavbarItem>
@@ -89,10 +99,9 @@ const Navbar = () => {
 
         {/* nav items */}
         {menuItems.map((item, index) => (
-          <NavbarItem key={index} className="text-overflow">
-            <Link color="foreground" href={item.href} className="text-hover-animation hover:translate-y-[-150%]">
-              <span className="block">{item.name}</span>
-              <span className="text-hover">{item.name}</span>
+          <NavbarItem key={index}>
+            <Link href={item.href}>
+              <TextHoverShift text={item.name} />
             </Link>
           </NavbarItem>
         ))}
@@ -101,7 +110,11 @@ const Navbar = () => {
       <NavbarContent justify="end">
         <NavbarItem>
           <Button className="uppercase bg-gradient-to-tr from-white to-white-1">
-            Contact Us <ArrowRight strokeWidth={1} size={20} />
+            <TextHoverShift>
+              <span className="flex items-center gap-1">
+                Contact Us <ArrowRight strokeWidth={1} size={20} />
+              </span>
+            </TextHoverShift>
           </Button>
         </NavbarItem>
       </NavbarContent>
@@ -118,7 +131,7 @@ const Navbar = () => {
                 radius="sm"
                 variant="solid"
               >
-                Services
+                <TextHoverShift text="Services" />
               </DropDownButton>
             </DropdownTrigger>
           </NavbarMenuItem>
@@ -146,8 +159,8 @@ const Navbar = () => {
 
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
-            <Link color="foreground" href={item.href} className="text-4xl">
-              {item.name}
+            <Link href={item.href} className="text-4xl">
+              <TextHoverShift text={item.name} />
             </Link>
           </NavbarMenuItem>
         ))}
