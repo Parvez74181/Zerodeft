@@ -16,10 +16,12 @@ export default {
       colors: {
         white: "#ffffff",
         "white-1": "#E9E9EA",
+        "white-2": "#F5F5F7",
         dark: "#02021E",
         "dark-1": "#02021E",
         "dark-2": "#150E59",
         blue: "#534CB2",
+        "blue-1": "#3827C7",
         "dark-blue-1": "#2C277D",
         "dark-blue-2": "#534CB2",
       },

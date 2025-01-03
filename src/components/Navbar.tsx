@@ -31,9 +31,10 @@ const Navbar = () => {
     <NavbarUI
       isBordered
       shouldHideOnScroll
+      isBlurred
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
-      className="border-t border-b border-white-1 top-5 bg-transparent *:text-base *:px-0 *:max-w-full mb-10"
+      className="border-t border-b border-white-1 top-1 bg-transparent *:text-base *:px-0 *:max-w-full mb-10 section md:px-5"
     >
       <NavbarContent className="sm:hidden " justify="start" style={{ flexGrow: 0 }}>
         <NavbarMenuToggle aria-label={isMenuOpen ? "Close menu" : "Open menu"} />

@@ -22,9 +22,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${questrial.variable} dark font-questrial min-h-[100vh] bg-dark-1 text-white antialiased`}>
+      <body className={`${questrial.variable} dark font-questrial  bg-dark-1 text-white antialiased`}>
         <Scroll />
-        <main className="container mx-auto px-3 md:px-0">
+        <main>
           <Navbar />
           {children}
         </main>
