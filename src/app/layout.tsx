@@ -22,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${questrial.variable} dark font-questrial  bg-dark-1 text-white antialiased`}>
+      <body className={`${questrial.variable} dark font-questrial  bg-dark-1 text-white antialiased overflow-x-hidden`}>
         <Scroll />
         <main>
           <Navbar />

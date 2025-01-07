@@ -5,8 +5,9 @@ import { motion } from "framer-motion";
 type Props = {
   children?: React.ReactNode;
   text?: string;
+  className?: string;
 };
-const TextHoverShift = ({ children, text }: Props) => {
+const TextHoverShift = ({ children, text, className }: Props) => {
   const textVariants = {
     rest: { y: 0, opacity: 1 },
     hover: { y: -30, opacity: 0 },
@@ -22,7 +23,7 @@ const TextHoverShift = ({ children, text }: Props) => {
       initial="rest"
       whileHover="hover"
       animate="rest"
-      whileTap="hover"
+      whileTap="rest"
       style={{
         position: "relative",
         display: "inline-flex",
@@ -38,6 +39,7 @@ const TextHoverShift = ({ children, text }: Props) => {
           position: "relative",
           display: "inline-block",
         }}
+        className={className}
       >
         {children || text}
       </motion.span>
@@ -48,6 +50,7 @@ const TextHoverShift = ({ children, text }: Props) => {
 
           display: "inline-block",
         }}
+        className={className}
       >
         {children || text}
       </motion.span>

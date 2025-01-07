@@ -7,3 +7,10 @@
     @apply container mx-auto px-3 md:px-0;
   }
 }
+
+@layer base {
+  :root {
+
+    --radius: 0.5rem
+  }
+}

@@ -5,35 +5,11 @@ import HeroBG from "../../../public/hero-bg.svg";
 import Reveal from "@/components/animated/Reveal";
 import TextHoverShift from "@/components/animated/TextHoverShift";
 import AvatarGroup from "@/components/ui/AvatarGroup";
-import { LayoutPanelLeft, Megaphone, MoveUpRight, Search, ServerCog, Zap } from "lucide-react";
+import { Calendar, MoveUpRight, Zap } from "lucide-react";
 import Link from "next/link";
+import ourServices from "../../../utils/OurServices";
+import Reviews from "@/components/Reviews";
 
-export const ourServices = [
-  {
-    name: "Discovery",
-    icon: <Search />,
-    description:
-      "Every great journey starts with understanding. In the discovery phase, we dive deep into your vision, values, and goals, laying the groundwork for everything that follows.",
-  },
-  {
-    name: "Design",
-    icon: <LayoutPanelLeft />,
-    description:
-      "Design is where your story takes shape. By putting your users first, we craft a visual narrative that reflects your brand’s personality—thoughtful, creative, and unmistakably yours.",
-  },
-  {
-    name: "Development",
-    icon: <ServerCog />,
-    description:
-      "Development is where ideas come to life. We create digital experiences that are not only functional and reliable but also delightfully engaging for your users.",
-  },
-  {
-    name: "Marketing",
-    icon: <Megaphone />,
-    description:
-      "From growing your audience to making your brand unforgettable, we use smart strategies and powerful tools to help your message reach the right people at the right time.",
-  },
-];
 export default function Home() {
   return (
     <>
@@ -91,7 +67,7 @@ export default function Home() {
 
       <section className="bg-gradient-to-b from-dark-2 to-dark-blue-1 py-5 md:py-10">
         <div className="relative  section ">
-          <div className=" text-dark relative p-3 md:p-5 lg:p-10 bg-white rounded-2xl md:rounded-[1.5rem] lg:rounded-[2.5rem]">
+          <div className=" text-dark relative p-3 md:p-5 lg:p-10 bg-white  rounded-2xl md:rounded-[1.5rem] lg:rounded-[2.5rem] ">
             <h2 className="sm:text-6xl text-5xl md:text-7xl lg:text-9xl font-semibold uppercase ">
               our <br /> services
             </h2>
@@ -125,6 +101,45 @@ export default function Home() {
                 </li>
               ))}
             </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="reviews" className=" bg-gradient-to-b from-dark-blue-1 to-dark-2">
+        <div className="section min-h-[70vh] flex lg:justify-between items-center lg:flex-row flex-col gap-10">
+          <div className="w-full lg:w-[30%]">
+            <h2 className="sm:text-4xl text-3xl md:text-4xl lg:text-5xl font-semibold uppercase  w-full">
+              What People Say About Us!
+            </h2>
+            <p className="text-lg  pt-3">
+              Real stories. Genuine experiences. Hear what our amazing clients have to say about working with us and how
+              we've helped them achieve their goals.
+            </p>
+          </div>
+          <div className="w-full lg:w-[60%] flex justify-center items-center">
+            <Reviews />
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-gradient-to-b  from-dark-2 to-dark-1">
+        <div className="section">
+          <div className="relative  text-black bg-white lg:w-[80%] xl:w-2/3 mx-auto min-h-[50vh] rounded-2xl md:rounded-[1.5rem] lg:rounded-[2.5rem]  flex justify-center items-center flex-col p-8">
+            <h2 className="sm:text-5xl text-4xl md:text-5xl lg:text-6xl font-semibold uppercase text-center w-full">
+              Ready to discuss your project with us?
+            </h2>
+            <p className="text-lg text-center px-14 py-3">
+              Let’s talk about how we can craft a user experience that not only looks great but drives real growth for
+              your product.
+            </p>
+
+            <Button className="bg-blue-1 text-white uppercase w-52 h-12 font-medium text-lg">
+              <TextHoverShift>
+                <span className="text-white flex items-center justify-center gap-2">
+                  Book a call <Calendar />
+                </span>
+              </TextHoverShift>
+            </Button>
           </div>
         </div>
       </section>
