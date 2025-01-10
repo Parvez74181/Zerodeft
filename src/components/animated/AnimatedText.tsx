@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useAnimation, useInView, Variant } from "framer-motion";
+import { motion, useAnimation, useInView, Variant } from "motion/react";
 import { JSX, useEffect, useRef } from "react";
 
 type AnimatedTextProps = {

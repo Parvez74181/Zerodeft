@@ -6,11 +6,43 @@
   .section {
     @apply container mx-auto px-3 md:px-0;
   }
+  .rounded-custom {
+    @apply rounded-2xl md:rounded-[1.5rem] lg:rounded-[2.5rem];
+  }
+  .py-custom,
+  .pb-custom {
+    @apply py-8 md:py-12;
+  }
 }
 
 @layer base {
   :root {
-
-    --radius: 0.5rem
+    --radius: 0.5rem;
+    --dark: #02021e;
+    --dark-1: #02021e;
+    --dark-2: #150e59;
+    --blue-1: #3827c7;
+    --dark-blue-1: #2c277d;
+    --dark-blue-2: #534cb2;
   }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--dark-1);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--blue-1);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--dark-blue-2);
 }

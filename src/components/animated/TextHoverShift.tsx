@@ -1,13 +1,15 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { cn } from "@/lib/utils";
+import { motion } from "motion/react";
 
 type Props = {
   children?: React.ReactNode;
   text?: string;
   className?: string;
+  parentClassName?: string;
 };
-const TextHoverShift = ({ children, text, className }: Props) => {
+const TextHoverShift = ({ children, text, className, parentClassName }: Props) => {
   const textVariants = {
     rest: { y: 0, opacity: 1 },
     hover: { y: -30, opacity: 0 },
@@ -24,14 +26,7 @@ const TextHoverShift = ({ children, text, className }: Props) => {
       whileHover="hover"
       animate="rest"
       whileTap="rest"
-      style={{
-        position: "relative",
-        display: "inline-flex",
-        justifyContent: "center",
-        alignItems: "center",
-        overflow: "hidden",
-      }}
-      className="w-full h-full"
+      className={cn("w-full h-full overflow-hidden inline-flex justify-center items-center", parentClassName)}
     >
       <motion.span
         variants={textVariants}
