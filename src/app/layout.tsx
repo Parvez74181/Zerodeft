@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Scroll from "./Scroll";
 import Footer from "@/components/Footer";
+import CursorMask from "@/components/animation/CursorMask";
 
 const questrial = Questrial({
   variable: "--font-questrial",
@@ -26,7 +27,9 @@ export default function RootLayout({
       <body className={`${questrial.variable} dark font-questrial  bg-dark-1 text-white antialiased overflow-x-hidden`}>
         <Scroll />
         <Navbar />
+
         <main>{children}</main>
+
         <Footer />
       </body>
     </html>

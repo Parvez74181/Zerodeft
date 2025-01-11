@@ -26,7 +26,7 @@ const AnimatedText = ({
   const ref = useRef(null);
   const textArray = Array.isArray(text) ? text : [text];
   const controls = useAnimation();
-  const isInView = useInView(ref, { amount: 0.5, once });
+  const isInView = useInView(ref, { amount: 0.5 });
 
   const defaultAnimations = {
     hidden: {

@@ -6,12 +6,18 @@
   .section {
     @apply container mx-auto px-3 md:px-0;
   }
+
+  .hero-section-title {
+    @apply bg-gradient-to-l text-transparent dark:text-transparent bg-clip-text animate-text-gradient font-bold dark:bg-zinc-50 bg-[length:300%] rounded-xl from-zinc-600 via-zinc-100 to-zinc-700 text-5xl md:text-6xl lg:text-8xl uppercase text-pretty md:text-start text-center z-10;
+  }
   .rounded-custom {
     @apply rounded-2xl md:rounded-[1.5rem] lg:rounded-[2.5rem];
   }
-  .py-custom,
+  .py-custom {
+    @apply py-10 md:py-20;
+  }
   .pb-custom {
-    @apply py-8 md:py-12;
+    @apply pb-10 md:pb-20;
   }
 }
 
@@ -28,7 +34,7 @@
 }
 
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 0.0000000000000001px;
 }
 
 /* Track */
@@ -46,3 +52,21 @@
 ::-webkit-scrollbar-thumb:hover {
   background: var(--dark-blue-2);
 }
+
+.mask {
+  position: absolute;
+  mask-image: url("/mask.svg");
+  background: white;
+  mask-repeat: no-repeat;
+  mask-size: 50px;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f5f5f5;
+}
+
+/* * {
+  outline: 1px solid red;
+} */

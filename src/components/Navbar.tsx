@@ -1,5 +1,5 @@
 "use client";
-import { ArrowRight, ChevronDown } from "lucide-react";
+import { ArrowRight, ChevronDown, Code, CodeXml } from "lucide-react";
 
 import {
   Navbar as NavbarUI,
@@ -18,7 +18,7 @@ import {
 } from "@nextui-org/react";
 import Button from "./ui/Button";
 import { useState } from "react";
-import TextHoverShift from "./animated/TextHoverShift";
+import TextHoverShift from "./animation/TextHoverShift";
 import Link from "next/link";
 import ourServices from "../../utils/OurServices";
 import menuItems from "../../utils/MenuItems";
@@ -34,33 +34,35 @@ const Navbar = () => {
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
       className="
-      
- border-t uppercase border-b border-white-1 top-1 bg-transparent *:text-base *:px-0 *:max-w-full mb-10 section md:px-5"
+      data-[hidden=true]:top-0
+ border-t uppercase border-b border-white-1 top-2 md:top-5 bg-transparent *:text-base *:px-0 *:max-w-full mb-10 section md:px-5"
     >
-      <NavbarContent className="md:hidden " justify="start" style={{ flexGrow: 0 }}>
+      <NavbarContent className="lg:hidden " justify="start" style={{ flexGrow: 0 }}>
         <NavbarMenuToggle aria-label={isMenuOpen ? "Close menu" : "Open menu"} />
       </NavbarContent>
 
       {/* small device logo */}
-      <NavbarContent className="md:hidden pr-3" justify="center">
+      <NavbarContent onClick={() => setIsMenuOpen(false)} className="lg:hidden pr-3" justify="center">
         <NavbarBrand>
-          <Link href="/" className="font-bold text-inherit">
-            ACME
+          <Link href="/" className="sm:text-xl text-lg font-bold text-inherit flex items-center gap-1">
+            <CodeXml className="size-7" strokeWidth={2.5} />
+            Soft Ux
           </Link>
         </NavbarBrand>
       </NavbarContent>
 
       {/* large device logo */}
-      <NavbarContent className="hidden md:flex gap-4" justify="start">
+      <NavbarContent onClick={() => setIsMenuOpen(false)} className="hidden lg:flex gap-4" justify="start">
         <NavbarBrand>
-          <Link href="/" className="font-bold text-inherit">
-            ACME
+          <Link href="/" className="sm:text-xl text-lg font-bold text-inherit flex items-center gap-1">
+            <CodeXml className="size-7" strokeWidth={2.5} />
+            Soft Ux
           </Link>
         </NavbarBrand>
       </NavbarContent>
 
       {/* large device menus */}
-      <NavbarContent className="hidden md:flex gap-4" justify="center">
+      <NavbarContent className="hidden lg:flex lg:gap-7 xl:gap-10" justify="center">
         {/* services dropdown */}
 
         <Dropdown className="bg-dark/70 backdrop-blur-lg">
@@ -68,12 +70,10 @@ const Navbar = () => {
             <DropdownTrigger>
               <DropDownButton
                 disableRipple
-                className="p-0 bg-transparent data-[hover=true]:bg-transparent uppercase"
+                className="p-0 bg-transparent data-[hover=true]:bg-transparent uppercase text-lg"
                 endContent={<ChevronDown size={30} />}
-                radius="sm"
-                variant="solid"
               >
-                <TextHoverShift text="Services" />
+                <TextHoverShift className="hover:text-yellow" text="Services" />
               </DropDownButton>
             </DropdownTrigger>
           </NavbarItem>
@@ -109,8 +109,8 @@ const Navbar = () => {
 
         {/* nav items */}
         {menuItems.map((item, index) => (
-          <NavbarItem key={index}>
-            <Link href={item.href}>
+          <NavbarItem onClick={() => setIsMenuOpen(false)} key={index}>
+            <Link href={item.href} className="text-lg">
               <TextHoverShift text={item.name} />
             </Link>
           </NavbarItem>
@@ -118,7 +118,7 @@ const Navbar = () => {
       </NavbarContent>
 
       <NavbarContent justify="end">
-        <NavbarItem>
+        <NavbarItem onClick={() => setIsMenuOpen(false)}>
           <Button className="uppercase bg-gradient-to-tr from-white to-white-1">
             <TextHoverShift>
               <span className="flex items-center gap-1">
@@ -157,6 +157,7 @@ const Navbar = () => {
             <>
               {ourServices.map((service) => (
                 <DropdownItem
+                  onClick={() => setIsMenuOpen(false)}
                   key={service.name}
                   startContent={service.icon}
                   className="data-[hover=true]:bg-transparent cursor-default w-56"
@@ -169,12 +170,22 @@ const Navbar = () => {
         </Dropdown>
 
         {menuItems.map((item, index) => (
-          <NavbarMenuItem key={`${item}-${index}`}>
+          <NavbarMenuItem onClick={() => setIsMenuOpen(false)} key={`${item}-${index}`}>
             <Link href={item.href} className="text-3xl uppercase">
               <TextHoverShift text={item.name} />
             </Link>
           </NavbarMenuItem>
         ))}
+
+        {/* <NavbarMenuItem>
+          <Button className="uppercase bg-gradient-to-tr from-white to-white-1 w-56 h-12">
+            <TextHoverShift>
+              <span className="flex items-center gap-1 text-xl font-semibold">
+                Contact Us <ArrowRight />
+              </span>
+            </TextHoverShift>
+          </Button>
+        </NavbarMenuItem> */}
       </NavbarMenu>
     </NavbarUI>
   );

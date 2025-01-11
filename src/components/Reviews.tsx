@@ -1,10 +1,11 @@
 "use client";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { Card, CardHeader, CardBody, CardFooter, Divider } from "@nextui-org/react";
+import { Card, CardHeader, CardBody, CardFooter } from "@nextui-org/react";
+import Autoplay from "embla-carousel-autoplay";
 import reviewsData from "../../utils/ReviewsData";
 import Ratings from "./Ratings";
 import Image from "next/image";
-import Reveal from "./animated/Reveal";
+import Reveal from "./animation/Reveal";
 
 const Reviews = () => {
   return (
@@ -14,6 +15,11 @@ const Reviews = () => {
           align: "start",
           loop: true,
         }}
+        plugins={[
+          Autoplay({
+            delay: 2000,
+          }),
+        ]}
         className="w-full relative"
       >
         <Reveal type="right">

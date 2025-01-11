@@ -2,13 +2,13 @@
 import { Divider } from "@nextui-org/react";
 import Link from "next/link";
 import React, { useState } from "react";
-import AnimatedText from "./animated/AnimatedText";
+import AnimatedText from "./animation/AnimatedText";
 
 import { Facebook, Github, Instagram, Linkedin, Mail, MoveUpRight } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import ourServices from "../../utils/OurServices";
 import menuItems from "../../utils/MenuItems";
-import TextHoverShift from "./animated/TextHoverShift";
+import TextHoverShift from "./animation/TextHoverShift";
 
 const Footer = () => {
   const [date, setDate] = useState<Number>(new Date().getFullYear());
@@ -16,7 +16,7 @@ const Footer = () => {
     <>
       <footer className="pt-5 section">
         <div className="mx-auto w-full max-w-screen-xl">
-          <div className="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-3 text-lg">
+          <div className="grid  sm:grid-cols-2 gap-8 px-4 py-6 lg:py-8 lg:grid-cols-3 text-lg">
             <div>
               <AnimatedText
                 el="h3"
@@ -29,13 +29,14 @@ const Footer = () => {
                 <Mail className="absolute right-2 bg-white opacity-75 rounded-full size-8 text-black p-[6px]" />
               </div>
 
-              <div className="w-full flex items-center justify-between">
-                <div>
+              <div className="w-full flex lg:flex-row flex-col items-center lg:justify-between">
+                <div className="w-full lg:w-auto">
                   <h3 className="text-xl uppercase opacity-50">Drop us a line</h3>
                   <p>info@gmail.com</p>
                 </div>
-                <Divider orientation="vertical" className="h-10 w-0.5 rounded-full" />
-                <div>
+                <Divider orientation="vertical" className="h-10 w-0.5 rounded-full hidden lg:block" />
+                <Divider className="h-0.5 rounded-full  lg:hidden" />
+                <div className="w-full lg:w-auto">
                   <h3 className="text-xl uppercase opacity-50">Call Us</h3>
                   <p>01xxxxxxxxxxxxxx</p>
                 </div>
@@ -74,7 +75,7 @@ const Footer = () => {
 
           {/* bottom part */}
           <Divider className="w-full h-0.5 rounded-full mb-3" />
-          <div className="px-4 py-6  md:flex md:items-center md:justify-between">
+          <div className="px-4 py-6  flex items-center justify-center md:flex-row flex-col md:justify-between">
             <span className="opacity-60 text-white-1 sm:text-center">
               © {`${date}`} <Link href="/">Flowbite™</Link>. All Rights Reserved.
             </span>

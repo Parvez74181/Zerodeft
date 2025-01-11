@@ -8,10 +8,11 @@ type Props = {
   children?: React.ReactNode;
   className?: string;
   type?: "left" | "right" | "top" | "bottom";
+  delay?: number;
 };
 
 // The Reveal component adds an animation to its children when they come into view
-const Reveal = ({ children, className, type = "bottom" }: Props) => {
+const Reveal = ({ children, className, type = "bottom", delay = 0.25 }: Props) => {
   const ref = useRef(null); // Ref to track the component's DOM element
   const isInView = useInView(ref); // Check if the element is in view, only once
   const controls = useAnimation(); // Animation controls
@@ -39,12 +40,12 @@ const Reveal = ({ children, className, type = "bottom" }: Props) => {
     <div ref={ref} style={{ position: "relative", overflow: "hidden" }} className={className}>
       <motion.div
         variants={{
-          hidden: { opacity: 0, [axis]: value }, // Hidden state: off-screen
-          visible: { opacity: 1, x: 0, y: 0 }, // Visible state: fully on-screen
+          hidden: { opacity: 0, scale: 0.8, [axis]: value }, // Hidden state: off-screen with reduced scale
+          visible: { opacity: 1, scale: 1, x: 0, y: 0 }, // Visible state: fully on-screen with normal scale
         }}
         initial="hidden" // Start from hidden state
         animate={controls} // Controls the animation state
-        transition={{ duration: 0.5, delay: 0.25 }} // Animation duration and delay
+        transition={{ type: "spring", stiffness: 100, damping: 20, delay: delay }} // Spring animation with stiffness and damping
         aria-hidden
       >
         {children} {/* Render any children passed to the Reveal component */}
