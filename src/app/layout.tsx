@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Scroll from "./Scroll";
 import Footer from "@/components/Footer";
 import CursorMask from "@/components/animation/CursorMask";
+import Cursor from "@/components/Cursor";
 
 const questrial = Questrial({
   variable: "--font-questrial",

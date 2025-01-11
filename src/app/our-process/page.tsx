@@ -17,10 +17,12 @@ const page = () => {
               <h1 className="hero-section-title ">Customized Dedicated Team Services</h1>
             </Reveal>
 
-            <p className="leading-7 text-lg text-gray-500">
-              Our process is simple and transparent. We believe in delivering quality work to our clients and we follow
-              a process that ensures that we deliver the best possible results.
-            </p>
+            <Reveal type="left" delay={0.4}>
+              <p className="hero-section-description">
+                Our dedicated teams are focused on delivering fast results with minimized risks. Our IT professionals
+                will leverage their skills to ensure your project's success.
+              </p>
+            </Reveal>
           </div>
 
           <div className="w-full md:w-[40%] relative h-full flex justify-center items-center flex-col z-5">
