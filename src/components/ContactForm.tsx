@@ -42,20 +42,17 @@ const ContactForm = () => {
   return (
     <>
       <Form className=" w-full" validationBehavior="native" onSubmit={onSubmit}>
-        <div className="flex md:flex-row flex-col items-start md:items-center gap-7">
-          <AvatarGroup />
-          <div>
-            <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold sm:text-nowrap">
-              Schedule a Consultation
-            </h2>
-            <p className="md:text-xl opacity-70">Discuss your goals and create a project plan with our experts</p>
-          </div>
+        <div>
+          <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold sm:text-nowrap">
+            Schedule a Consultation
+          </h2>
+          <p className="md:text-xl opacity-70">Discuss your goals and create a project plan with our experts</p>
         </div>
-        <div className="w-full flex md:flex-row flex-col items-center justify-between gap-3 *:w-full">
+        <div className="w-full flex md:flex-row flex-col items-center justify-between md:gap-5 *:w-full pb-2 md:pb-0 gap-3">
           <Input variant="underlined" label="Full Name" name="fullName" type="text" isRequired />
           <Input variant="underlined" label="Email" name="email" type="email" isRequired />
         </div>
-        <div className="w-full flex md:flex-row flex-col items-center justify-between gap-3 *:w-full">
+        <div className="w-full flex md:flex-row flex-col items-center justify-between md:gap-5 *:w-full pb-3 md:pb-0 gap-3">
           <Input variant="underlined" label="Mobile Number" name="phone" type="tel" />
           <Input variant="underlined" label="Subject" name="subject" type="text" />
         </div>
@@ -71,7 +68,7 @@ const ContactForm = () => {
               </span>
             </TextHoverShift>
           </Button>
-          <p className="w-full  lg:text-lg opacity-70">
+          <p className="w-full sm:text-base text-xs lg:text-lg opacity-70">
             By submitting the form I agree with the{" "}
             <Link href={"/privacy-policy"} className="text-blue-1 hover:underline inline-block">
               Privacy Policy

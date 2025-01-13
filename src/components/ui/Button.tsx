@@ -60,7 +60,7 @@ const Button = ({
           classNames={{
             body: "py-6",
 
-            base: "bg-dark-1 !max-w-[100%] w-[70%] border border-white overflow-hidden",
+            base: "bg-dark-1 !max-w-[100%] w-[95%] md:w-[70%] lg:w-[60%] border border-white overflow-hidden",
 
             footer: "border-t-[1px] border-[#292f46]",
             closeButton: "hover:bg-white/5 active:bg-white/10",
