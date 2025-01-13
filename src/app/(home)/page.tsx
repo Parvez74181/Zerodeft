@@ -13,6 +13,7 @@ import Counter from "@/components/animation/Counter";
 import { Divider } from "@nextui-org/react";
 import CTAContentBlock from "@/components/CTAContentBlock";
 import BookCall from "@/components/BookCall";
+import FAQ from "@/components/FAQ";
 
 export default function Home() {
   return (
@@ -25,7 +26,11 @@ export default function Home() {
 
               <div className="flex justify-center md:inline-flex items-center *:transition-all *:ease-in group py-5 md:py-3">
                 <Zap className="rounded-full bg-white size-10 group-hover:size-0 p-1.5 group-hover:p-0 text-black" />
-                <Button className="bg-amber-300 uppercase md:w-36 w-44 h-11 font-medium text-lg">
+                <Button
+                  showDialog
+                  dialogType="contact_form"
+                  className="bg-amber-300 uppercase md:w-36 w-44 h-11 font-medium text-lg"
+                >
                   <TextHoverShift text="Let's Talk" />
                 </Button>
                 <Zap className="rounded-full bg-white size-0 group-hover:size-10 group-hover:p-1.5 text-black" />
@@ -50,8 +55,13 @@ export default function Home() {
 
       <section id="team" className="flex justify-center items-center py-custom">
         <div className="section flex md:flex-row flex-col w-full gap-5 md:justify-center items-center">
-          <Reveal type="left" className="w-full md:w-1/3 md:order-1 order-2 flex items-center p-5 ps-0">
-            <AvatarGroup />
+          <Reveal type="left" className="w-full md:w-1/3 md:order-1 order-2 flex items-center p-5 overflow-x-auto">
+            <div className="flex md:justify-center items-center flex-row md:flex-col gap-5 md:gap-2">
+              <AvatarGroup />
+              <p className="text-sm">
+                FOUNDERS of <br /> Soft UX
+              </p>
+            </div>
           </Reveal>
 
           <div className="w-full md:w-2/3 md:order-2 order-1">
@@ -178,7 +188,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* <section id="reviews" className=" pb-10">
+      <>
+        {" "}
+        {/* <section id="reviews" className=" pb-10">
         <div className="section flex lg:justify-between items-center lg:flex-row flex-col gap-10">
           <div className="w-full lg:w-[30%]">
             <Reveal type="left">
@@ -199,9 +211,10 @@ export default function Home() {
           </div>
         </div>
       </section> */}
-      {/* <section id="our-project"></section> */}
+        {/* <section id="our-project"></section> */}
+      </>
 
-      <section id="about-us" className="section py-custom">
+      <section id="about-us" className="section">
         <div className="relative flex justify-center items-center flex-col gap-5">
           <Reveal type="top">
             <h2 className="sm:text-5xl text-3xl md:text-5xl lg:text-6xl font-semibold uppercase text-center w-full">
@@ -219,7 +232,26 @@ export default function Home() {
           </Reveal>
         </div>
       </section>
-      <section id="book-a-call" className="bg-gradient-to-b from-dark to-dark-2 pb-0 rounded-custom">
+
+      <section id="faq" className="py-custom">
+        <div className="section flex items-start gap-5 justify-between  lg:flex-row flex-col">
+          <div className="w-full lg:w-1/2">
+            <Reveal type="left">
+              <h2 className="sm:text-5xl text-4xl md:text-6xl lg:text-7xl font-semibold uppercase text-center md:text-start">
+                faq's
+              </h2>
+            </Reveal>
+          </div>
+
+          <div className="w-full lg:w-2/3">
+            <Reveal type="right">
+              <FAQ />
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
+      <section id="book-a-call" className="bg-gradient-to-b from-dark to-dark-2 pb-0 rounded-custom ">
         <BookCall />
       </section>
     </>

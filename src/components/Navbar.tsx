@@ -119,7 +119,7 @@ const Navbar = () => {
 
       <NavbarContent justify="end">
         <NavbarItem onClick={() => setIsMenuOpen(false)}>
-          <Button className="uppercase bg-gradient-to-tr from-white to-white-1">
+          <Button showDialog dialogType="contact_form" className="uppercase bg-gradient-to-tr from-white to-white-1">
             <TextHoverShift>
               <span className="flex items-center gap-1">
                 Contact Us <ArrowRight strokeWidth={1} size={20} />

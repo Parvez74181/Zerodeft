@@ -24,7 +24,11 @@ const BookCall = () => {
             </Reveal>
 
             <Reveal>
-              <Button className="bg-blue-1 text-white uppercase md:w-52 w-44 h-12 font-semibold text-base md:text-lg">
+              <Button
+                showDialog
+                dialogType="contact_form"
+                className="bg-blue-1 text-white uppercase md:w-52 w-44 h-12 font-semibold text-base md:text-lg"
+              >
                 <TextHoverShift>
                   <span className="text-white flex items-center justify-center gap-2">
                     Book a call <Calendar className="w-5 md:w-6" />

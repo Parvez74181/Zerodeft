@@ -63,7 +63,7 @@ const Footer = () => {
                 <Divider className="h-0.5 rounded-full mb-3 inline-block" />
                 {menuItems.map((item, i) => (
                   <li key={i} className="mb-4">
-                    <Link href="#" className="opacity-50 uppercase flex items-center">
+                    <Link href={item.href} className="opacity-50 uppercase flex items-center">
                       <TextHoverShift text={item.name} parentClassName="justify-start" className="hover:underline" />
                       <MoveUpRight />
                     </Link>

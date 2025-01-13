@@ -1,0 +1,86 @@
+"use client";
+import { Input, Form, Textarea } from "@nextui-org/react";
+import Button from "./ui/Button";
+import AvatarGroup from "./ui/AvatarGroup";
+import { SendHorizontal, ShieldCheck } from "lucide-react";
+import Link from "next/link";
+import TextHoverShift from "./animation/TextHoverShift";
+import { useState } from "react";
+
+const ContactForm = () => {
+  const [submitted, setSubmitted] = useState<FormData | null>(null);
+
+  interface FormData {
+    fullName: string;
+    email: string;
+    phone?: string;
+    subject?: string;
+    aboutProject: string;
+  }
+
+  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    // Create FormData object from the form
+    const formData = new FormData(e.currentTarget);
+
+    // Map FormData entries to the FormData interface
+    const data: FormData = {
+      fullName: formData.get("fullName") as string,
+      email: formData.get("email") as string,
+      phone: (formData.get("phone") as string) || undefined,
+      subject: (formData.get("subject") as string) || undefined,
+      aboutProject: formData.get("aboutProject") as string,
+    };
+
+    // Update the state
+    setSubmitted(data);
+
+    // Log the submitted data
+    console.log("Submitted Data:", data);
+  };
+  return (
+    <>
+      <Form className=" w-full" validationBehavior="native" onSubmit={onSubmit}>
+        <div className="flex md:flex-row flex-col items-start md:items-center gap-7">
+          <AvatarGroup />
+          <div>
+            <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold sm:text-nowrap">
+              Schedule a Consultation
+            </h2>
+            <p className="md:text-xl opacity-70">Discuss your goals and create a project plan with our experts</p>
+          </div>
+        </div>
+        <div className="w-full flex md:flex-row flex-col items-center justify-between gap-3 *:w-full">
+          <Input variant="underlined" label="Full Name" name="fullName" type="text" isRequired />
+          <Input variant="underlined" label="Email" name="email" type="email" isRequired />
+        </div>
+        <div className="w-full flex md:flex-row flex-col items-center justify-between gap-3 *:w-full">
+          <Input variant="underlined" label="Mobile Number" name="phone" type="tel" />
+          <Input variant="underlined" label="Subject" name="subject" type="text" />
+        </div>
+        <div className="w-full">
+          <Textarea variant="underlined" label="About project" name="aboutProject" isRequired />
+        </div>
+        <div className="pt-4 w-full flex lg:flex-row flex-col  items-center gap-4">
+          <Button type="submit" className="uppercase bg-white w-48 sm:h-14 sm:w-64 font-xl font-bold">
+            <TextHoverShift>
+              <span className=" flex items-center justify-center gap-2">
+                Request a Quote
+                <SendHorizontal className="size-5 sm:size-6" />
+              </span>
+            </TextHoverShift>
+          </Button>
+          <p className="w-full  lg:text-lg opacity-70">
+            By submitting the form I agree with the{" "}
+            <Link href={"/privacy-policy"} className="text-blue-1 hover:underline inline-block">
+              Privacy Policy
+            </Link>
+          </p>
+        </div>
+      </Form>
+    </>
+  );
+};
+
+export default ContactForm;
