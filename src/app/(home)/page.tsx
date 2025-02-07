@@ -1,52 +1,43 @@
 import Button from "@/components/ui/Button";
 import Image from "next/image";
-import HeroBG from "../../../public/home.png";
+import HeroBG from "../../../public/home.webp";
 import Reveal from "@/components/animation/Reveal";
 import TextHoverShift from "@/components/animation/TextHoverShift";
 import AvatarGroup from "@/components/ui/AvatarGroup";
 import { BookOpenText, Calendar, MoveUpRight, Zap } from "lucide-react";
 import Link from "next/link";
-import ourServices from "../../../utils/OurServices";
+import ourServices from "../../../data/OurServices";
 import Reviews from "@/components/Reviews";
-import Features from "../../../utils/Features";
+import Features from "../../../data/Features";
 import Counter from "@/components/animation/Counter";
 import { Divider } from "@nextui-org/react";
 import CTAContentBlock from "@/components/CTAContentBlock";
 import BookCall from "@/components/BookCall";
 import FAQ from "@/components/FAQ";
+import CTAButton from "@/components/CTAButton";
 
 export default function Home() {
   return (
     <>
       <section id="hero" className="section">
         <div className="flex  md:flex-row flex-col w-full gap-3  pt-5 md:pt-10 md:justify-between items-center">
-          <div className="w-full md:w-[50%] relative h-full flex justify-center items-center md:items-start flex-col gap-3">
+          <div className="w-full md:w-[60%] relative h-full flex justify-center items-center md:items-start flex-col gap-3">
             <Reveal type="left">
               <h1 className="hero-section-title">let’s create the next world changing thing!</h1>
 
-              <div className="flex justify-center md:inline-flex items-center *:transition-all *:ease-in group py-5 md:py-3">
-                <Zap className="rounded-full bg-white size-10 group-hover:size-0 p-1.5 group-hover:p-0 text-black" />
-                <Button
-                  showDialog
-                  dialogType="contact_form"
-                  className="bg-amber-300 uppercase md:w-36 w-44 h-11 font-medium text-lg"
-                >
-                  <TextHoverShift text="Let's Talk" />
-                </Button>
-                <Zap className="rounded-full bg-white size-0 group-hover:size-10 group-hover:p-1.5 text-black" />
-              </div>
+              <CTAButton text="Let's Talk" />
             </Reveal>
           </div>
 
           <div className="w-full md:w-[40%] relative h-full flex justify-center items-center flex-col z-5">
-            <Reveal type="right">
+            <Reveal type="right" className="w-full">
               <Image
                 src={HeroBG}
                 alt="hero-bg"
                 className="w-full object-contain animate-float "
                 width={2000}
                 height={2000}
-                sizes="50vw"
+                sizes="70vw"
               />
             </Reveal>
           </div>
@@ -59,7 +50,7 @@ export default function Home() {
             <div className="flex md:justify-center items-center flex-row md:flex-col gap-5 md:gap-2">
               <AvatarGroup />
               <p className="text-sm">
-                FOUNDERS of <br /> Soft UX
+                FOUNDERS OF <br /> SOFT UX
               </p>
             </div>
           </Reveal>

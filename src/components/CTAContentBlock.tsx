@@ -15,7 +15,7 @@ const CTAContentBlock = ({ btnText, description, icon, disabled = false }: Props
         <Reveal type="left" className="w-full md:w-1/3  flex items-center justify-start p-5 ps-0">
           <Button
             disabled={disabled}
-            className="bg-white text-dark uppercase w-52  h-12 font-semibold text-base md:text-lg "
+            className="bg-white text-dark uppercase w-auto px-5  h-12 font-semibold text-base md:text-lg "
           >
             <TextHoverShift>
               <span className="flex justify-between items-center gap-3">

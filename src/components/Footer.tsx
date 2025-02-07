@@ -6,8 +6,8 @@ import AnimatedText from "./animation/AnimatedText";
 
 import { Facebook, Github, Instagram, Linkedin, Mail, MoveUpRight } from "lucide-react";
 import { Input } from "@/components/ui/input";
-import ourServices from "../../utils/OurServices";
-import menuItems from "../../utils/MenuItems";
+import ourServices from "../../data/OurServices";
+import menuItems from "../../data/MenuItems";
 import TextHoverShift from "./animation/TextHoverShift";
 
 const Footer = () => {

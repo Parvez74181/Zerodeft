@@ -60,7 +60,7 @@ const ContactForm = () => {
           <Textarea variant="underlined" label="About project" name="aboutProject" isRequired />
         </div>
         <div className="pt-4 w-full flex lg:flex-row flex-col  items-center gap-4">
-          <Button type="submit" className="uppercase bg-white w-48 sm:h-14 sm:w-64 font-xl font-bold">
+          <Button type="submit" className="uppercase bg-white w-auto px-5 sm:h-14 sm:w-64 font-xl font-bold">
             <TextHoverShift>
               <span className=" flex items-center justify-center gap-2">
                 Request a Quote

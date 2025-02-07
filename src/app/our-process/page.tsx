@@ -6,27 +6,29 @@ import CTAContentBlock from "@/components/CTAContentBlock";
 import Swiper from "@/components/WhenToHireSwiper";
 import BookCall from "@/components/BookCall";
 import FAQ from "@/components/FAQ";
+import CTAButton from "@/components/CTAButton";
 
 const page = () => {
   return (
     <>
       <section id="hero" className="section">
         <div className="flex  md:flex-row flex-col w-full gap-3  pt-5 md:pt-10 md:justify-between items-center">
-          <div className="w-full md:w-[50%] relative h-full flex justify-center items-center md:items-start flex-col gap-3">
+          <div className="w-full md:w-[60%] relative h-full flex justify-center items-center md:items-start flex-col gap-3">
             <Reveal type="left">
               <h1 className="hero-section-title ">Customized Dedicated Team Services</h1>
             </Reveal>
 
-            <Reveal type="left" delay={0.4}>
-              <p className="hero-section-description">
+            <Reveal type="left" delay={0.4} className="w-full">
+              <p className="text-lg text-zinc-300 text-center md:text-start">
                 Our dedicated teams are focused on delivering fast results with minimized risks. Our IT professionals
                 will leverage their skills to ensure your project's success.
               </p>
+              <CTAButton text="Let's talk" />
             </Reveal>
           </div>
 
           <div className="w-full md:w-[40%] relative h-full flex justify-center items-center flex-col z-5">
-            <Reveal type="right">
+            <Reveal type="right" className="w-full">
               <Image
                 src={HeroBG}
                 alt="hero-bg"

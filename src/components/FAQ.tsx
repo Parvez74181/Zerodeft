@@ -1,6 +1,6 @@
 "use client";
 import { Accordion, AccordionItem } from "@nextui-org/react";
-import FaqData from "../../utils/FaqData";
+import FaqData from "../../data/FaqData";
 
 const FAQ = () => {
   const itemClasses = {
@@ -14,7 +14,10 @@ const FAQ = () => {
     <Accordion itemClasses={itemClasses}>
       {FaqData.map((faq, i) => (
         <AccordionItem key={i} aria-label={faq.title} title={faq.title} className="text-xl">
-          <div dangerouslySetInnerHTML={{ __html: faq.description }} />
+          <div
+            className="*:list-disc *:list-inside *:space-y-2"
+            dangerouslySetInnerHTML={{ __html: faq.description }}
+          />
         </AccordionItem>
       ))}
     </Accordion>

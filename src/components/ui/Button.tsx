@@ -54,9 +54,10 @@ const Button = ({
       {showDialog && (
         <Modal
           backdrop="blur"
+          scrollBehavior="inside"
+          className="overflow-y-auto"
           isOpen={isOpen}
           onOpenChange={onOpenChange}
-          placement="center"
           classNames={{
             body: "py-6",
 

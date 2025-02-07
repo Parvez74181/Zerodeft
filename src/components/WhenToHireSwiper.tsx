@@ -6,7 +6,7 @@ import { Card, CardBody, CardFooter, CardHeader } from "@nextui-org/react";
 
 import Reveal from "./animation/Reveal";
 import Image from "next/image";
-import whenToHireData from "../../utils/WhenToHireDetails";
+import whenToHireData from "../../data/WhenToHireDetails";
 import { Plus } from "lucide-react";
 import { cn } from "@/lib/utils";
 

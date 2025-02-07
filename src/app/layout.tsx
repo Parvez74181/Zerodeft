@@ -6,6 +6,7 @@ import Scroll from "./Scroll";
 import Footer from "@/components/Footer";
 import CursorMask from "@/components/animation/CursorMask";
 import Cursor from "@/components/Cursor";
+import ReturnToTop from "@/components/ReturnToTop";
 
 const questrial = Questrial({
   variable: "--font-questrial",
@@ -31,6 +32,7 @@ export default function RootLayout({
       <body className={`${questrial.variable} dark font-questrial  bg-dark-1 text-white antialiased overflow-x-hidden`}>
         <Scroll />
         <Navbar />
+        <ReturnToTop />
 
         <main>{children}</main>
 
