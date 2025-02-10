@@ -43,13 +43,14 @@ const page = () => {
           </div>
         </div>
       </section>
+
       <section className="section py-custom">
-        <h3 className="uppercase  text-center text-6xl md:text-8xl font-semibold">
+        <h3 className="uppercase  text-center text-4xl sm:text-6xl md:text-8xl font-semibold">
           <span className="text-gradient-yellow">High-performance</span> solutions that scale with you
         </h3>
       </section>
 
-      <section id="cta" className="">
+      <section id="cta" className="bg-gradient-to-b from-dark-1 to-dark-2">
         <CTAContentBlock
           disabled
           btnText="Our achievements"
@@ -57,14 +58,16 @@ const page = () => {
           icon={<Award />}
         />
       </section>
-      <section id="services" className="section py-custom">
+
+      <section id="services" className=" py-custom bg-gradient-to-b from-dark-2 to-dark-2">
         <ServicesUI serviceName="Development" title="Tech Services" />
       </section>
-      <section id="how-we-work" className=" pb-custom">
+
+      <section id="how-we-work" className=" pb-custom bg-gradient-to-b from-dark-2 to-dark-blue-2">
         <Swiper />
       </section>
 
-      <section id="cta-2" className="section py-custom">
+      <section id="cta-2" className=" py-custom bg-gradient-to-b from-dark-blue-2 to-dark-blue-1">
         <CTAContentBlock
           disabled
           btnText="Product design"
@@ -73,11 +76,11 @@ const page = () => {
         />
       </section>
 
-      {/* <section id="techStack">
+      <section id="techStack" className="bg-gradient-to-b from-dark-blue-1 to-dark-2">
         <TechStack />
-      </section> */}
+      </section>
 
-      <section id="faq" className="py-custom">
+      <section id="faq" className="py-custom bg-gradient-to-b from-dark-2 to-dark-1">
         <div className="section flex items-start gap-5 justify-between  lg:flex-row flex-col">
           <div className="w-full lg:w-1/2">
             <Reveal type="left">
@@ -94,6 +97,7 @@ const page = () => {
           </div>
         </div>
       </section>
+
       <section id="book-a-call" className="bg-gradient-to-b pb-0 rounded-custom rounded-ss-none rounded-se-none ">
         <BookCall />
       </section>

@@ -16,6 +16,7 @@ type ButtonProps = {
   dialogType?: "contact_form";
   type?: "submit" | "button" | "reset";
   id?: string;
+  onPress?: () => void;
 };
 
 const Button = ({
@@ -30,6 +31,7 @@ const Button = ({
   dialogType,
   type = "button",
   id,
+  onPress,
 }: ButtonProps) => {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
@@ -43,7 +45,7 @@ const Button = ({
     <>
       <ButtonUI
         id={id}
-        onPress={handlePress}
+        onPress={onPress || handlePress}
         isLoading={isLoading}
         radius={radius}
         className={cn("*:text-black shadow-lg px-0 w-36", className)}

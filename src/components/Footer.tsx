@@ -14,8 +14,8 @@ const Footer = () => {
   const [date, setDate] = useState<Number>(new Date().getFullYear());
   return (
     <>
-      <footer className="pt-5 section">
-        <div className="mx-auto w-full max-w-screen-xl">
+      <footer className="pt-5  md:px-8">
+        <div className="mx-auto w-full ">
           <div className="grid  sm:grid-cols-2 gap-8 px-4 py-6 lg:py-8 lg:grid-cols-3 text-lg">
             <div>
               <AnimatedText

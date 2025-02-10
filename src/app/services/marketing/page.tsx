@@ -44,7 +44,7 @@ const page = () => {
 
       <section className=" py-custom bg-gradient-to-b from-dark-1 to-dark-2">
         <div className="section">
-          <h3 className="uppercase  text-center text-6xl md:text-8xl font-semibold">
+          <h3 className="uppercase  text-center text-4xl sm:text-6xl md:text-8xl font-semibold">
             <span className="text-gradient-purple">Smart campaigns</span> that convert and retain customers
           </h3>
         </div>
@@ -61,7 +61,7 @@ const page = () => {
 
       <section id="services" className=" py-custom bg-gradient-to-b from-dark-2 to-dark-blue-1">
         <div className="section">
-          <ServicesUI serviceName="Marketing" />
+          <ServicesUI serviceName="Marketing" title="Marketing Services" />
         </div>
       </section>
 

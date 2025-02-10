@@ -11,10 +11,19 @@ const ServicesUI = ({ serviceName, title }: Props) => {
   const service = ourServices.find((service) => service.name === serviceName);
   return (
     <>
-      <div className="text-dark relative p-5 md:p-5 lg:p-10 bg-white rounded-custom">
+      <div className="text-dark relative p-5 md:p-5 lg:p-10 bg-white rounded-custom section">
         <Reveal type="top">
           <h2 className="sm:text-6xl text-5xl md:text-7xl lg:text-9xl font-semibold uppercase">
-            {title || "UPSELL SERVICES"}
+            {title ? (
+              <>
+                {title?.split(" ")[0]} <br />
+                {title?.split(" ")[1]}
+              </>
+            ) : (
+              <>
+                UPSELL <br /> SERVICES
+              </>
+            )}
           </h2>
         </Reveal>
         <ul className="w-full">
@@ -22,7 +31,7 @@ const ServicesUI = ({ serviceName, title }: Props) => {
             <li
               key={i}
               className={cn(
-                "w-full text-2xl py-3 md:py-5 uppercase font-semibold relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:rounded-full after:bg-purple-2 ",
+                "w-full text-lg md:text-2xl py-3 md:py-5 uppercase font-semibold relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:rounded-full after:bg-zinc-300 ",
                 i === 4 && "pb-0"
               )}
             >
