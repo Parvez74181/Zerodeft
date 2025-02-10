@@ -15,6 +15,7 @@ import CTAContentBlock from "@/components/CTAContentBlock";
 import BookCall from "@/components/BookCall";
 import FAQ from "@/components/FAQ";
 import CTAButton from "@/components/CTAButton";
+import TechStack from "@/components/TechStack";
 
 export default function Home() {
   return (
@@ -151,7 +152,7 @@ export default function Home() {
         />
       </section>
 
-      <section id="our-benefits" className="py-custom bg-gradient-to-b from-dark-blue-1 to-dark">
+      <section id="our-benefits" className="py-custom bg-gradient-to-b from-dark-blue-1 to-dark-2">
         <div className="section">
           <div className="relative">
             <Reveal type="top">
@@ -177,6 +178,10 @@ export default function Home() {
             </ul>
           </div>
         </div>
+      </section>
+
+      <section id="techStack" className="bg-gradient-to-b from-dark-2 to-dark-1">
+        <TechStack />
       </section>
 
       <>
@@ -205,7 +210,7 @@ export default function Home() {
         {/* <section id="our-project"></section> */}
       </>
 
-      <section id="about-us" className="section">
+      <section id="about-us" className="section py-custom">
         <div className="relative flex justify-center items-center flex-col gap-5">
           <Reveal type="top">
             <h2 className="sm:text-5xl text-3xl md:text-5xl lg:text-6xl font-semibold uppercase text-center w-full">
@@ -224,7 +229,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="faq" className="py-custom">
+      <section id="faq" className="">
         <div className="section flex items-start gap-5 justify-between  lg:flex-row flex-col">
           <div className="w-full lg:w-1/2">
             <Reveal type="left">
@@ -242,7 +247,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="book-a-call" className="bg-gradient-to-b from-dark to-dark-2 pb-0 rounded-custom ">
+      <section id="book-a-call" className="bg-gradient-to-b from-dark-1 to-dark-2 pb-0 rounded-custom py-custom">
         <BookCall />
       </section>
     </>
