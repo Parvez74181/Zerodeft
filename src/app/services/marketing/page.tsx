@@ -4,14 +4,12 @@ import CTAContentBlock from "@/components/CTAContentBlock";
 import { Award } from "lucide-react";
 import Image from "next/image";
 import React from "react";
-import ourServices from "../../../../data/OurServices";
-import { cn } from "@/lib/utils";
 import Swiper from "@/components/WhenToHireSwiper";
 import FAQ from "@/components/FAQ";
 import BookCall from "@/components/BookCall";
+import ServicesUI from "@/components/ServicesUI";
 
 const page = () => {
-  const marketingService = ourServices.find((service) => service.name === "Marketing");
   return (
     <>
       <section id="hero" className="section">
@@ -22,7 +20,7 @@ const page = () => {
             </Reveal>
 
             <Reveal type="left" delay={0.4} className="w-full">
-              <p className="text-lg text-zinc-300 text-center md:text-start">
+              <p className="text-lg text-zinc-300 text-center md:text-start md:w-[35rem]">
                 We help you reach the right audience and maximize conversions through strategic digital marketing.
               </p>
               <CTAButton text="Get More Leads Today" />
@@ -44,7 +42,15 @@ const page = () => {
         </div>
       </section>
 
-      <section className=" py-custom">
+      <section className=" py-custom bg-gradient-to-b from-dark-1 to-dark-2">
+        <div className="section">
+          <h3 className="uppercase  text-center text-6xl md:text-8xl font-semibold">
+            <span className="text-gradient-purple">Smart campaigns</span> that convert and retain customers
+          </h3>
+        </div>
+      </section>
+
+      <section id="cta" className="bg-gradient-to-b from-dark-2 to-dark-2">
         <CTAContentBlock
           disabled
           btnText="Our achievements"
@@ -53,32 +59,17 @@ const page = () => {
         />
       </section>
 
-      <section className="section">
-        <div className="text-dark relative p-3 md:p-5 lg:p-10 bg-white rounded-custom">
-          <Reveal type="top">
-            <h2 className="sm:text-6xl text-5xl md:text-7xl lg:text-9xl font-semibold uppercase">UPSELL SERVICES </h2>
-          </Reveal>
-          <ul className="w-full">
-            {marketingService?.subServices.map((subService, i) => (
-              <li
-                key={i}
-                className={cn(
-                  "w-full text-2xl py-3 md:py-5 uppercase font-semibold relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:rounded-full after:bg-zinc-500 ",
-                  i === 4 && "pb-0"
-                )}
-              >
-                {subService}
-              </li>
-            ))}
-          </ul>
+      <section id="services" className=" py-custom bg-gradient-to-b from-dark-2 to-dark-blue-1">
+        <div className="section">
+          <ServicesUI serviceName="Marketing" />
         </div>
       </section>
 
-      <section id="how-we-work" className=" py-custom">
+      <section id="how-we-work" className="bg-gradient-to-b from-dark-blue-1 to-dark-2 pb-custom">
         <Swiper />
       </section>
 
-      <section id="faq" className="">
+      <section id="faq" className="py-custom bg-gradient-to-b from-dark-2 to-dark-1">
         <div className="section flex items-start gap-5 justify-between  lg:flex-row flex-col">
           <div className="w-full lg:w-1/2">
             <Reveal type="left">
@@ -96,10 +87,7 @@ const page = () => {
         </div>
       </section>
 
-      <section
-        id="book-a-call"
-        className="bg-gradient-to-b py-custom pb-0 rounded-custom rounded-ss-none rounded-se-none "
-      >
+      <section id="book-a-call" className="bg-gradient-to-b pb-0 rounded-custom rounded-ss-none rounded-se-none ">
         <BookCall />
       </section>
     </>

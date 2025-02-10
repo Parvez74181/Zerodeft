@@ -14,7 +14,7 @@ const page = () => {
             </Reveal>
 
             <Reveal type="left" delay={0.4} className="w-full">
-              <p className="text-lg text-zinc-300 text-center md:text-start">
+              <p className="text-lg text-zinc-300 text-center md:text-start md:w-[35rem]">
                 We analyze your business, audience, and goals to build a solid foundation for success.
               </p>
             </Reveal>

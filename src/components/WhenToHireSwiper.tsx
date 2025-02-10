@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
-import { Card, CardBody, CardFooter, CardHeader } from "@nextui-org/react";
+import { Card, CardBody, CardFooter, CardHeader } from "@heroui/react";
 
 import Reveal from "./animation/Reveal";
 import Image from "next/image";
@@ -28,6 +28,9 @@ const Swiper = ({}: Props) => {
   return (
     <>
       <div className="section">
+        <h3 className="text-5xl md:text-6xl font-semibold uppercase mb-5">
+          Our <br /> Solutions
+        </h3>
         <Carousel
           opts={{
             align: "start",

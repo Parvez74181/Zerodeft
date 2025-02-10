@@ -1,5 +1,5 @@
 "use client";
-import { Avatar, AvatarGroup as AvatarGroupUI } from "@nextui-org/react";
+import { Avatar, AvatarGroup as AvatarGroupUI } from "@heroui/react";
 type Props = {
   images?: string[];
 };

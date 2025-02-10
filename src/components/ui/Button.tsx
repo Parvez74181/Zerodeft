@@ -1,7 +1,7 @@
 "use client";
 import { cn } from "@/lib/utils";
-import { Button as ButtonUI, ModalHeader } from "@nextui-org/react";
-import { Modal, ModalContent, ModalBody, useDisclosure } from "@nextui-org/react";
+import { Button as ButtonUI, ModalHeader } from "@heroui/react";
+import { Modal, ModalContent, ModalBody, useDisclosure } from "@heroui/react";
 import ContactForm from "../ContactForm";
 
 type ButtonProps = {
@@ -15,6 +15,7 @@ type ButtonProps = {
   size?: "sm" | "md" | "lg";
   dialogType?: "contact_form";
   type?: "submit" | "button" | "reset";
+  id?: string;
 };
 
 const Button = ({
@@ -28,6 +29,7 @@ const Button = ({
   showDialog = false,
   dialogType,
   type = "button",
+  id,
 }: ButtonProps) => {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
@@ -40,6 +42,7 @@ const Button = ({
   return (
     <>
       <ButtonUI
+        id={id}
         onPress={handlePress}
         isLoading={isLoading}
         radius={radius}

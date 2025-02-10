@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { ArrowUp } from "lucide-react";
+import { Tooltip } from "@heroui/react";
 
 const ReturnToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -23,12 +24,16 @@ const ReturnToTop = () => {
     <>
       {/* Return to top button */}
       {isVisible && (
-        <div
-          onClick={scrollToTop}
-          className="fixed bottom-5 right-5 bg-white size-10 rounded-full flex items-center justify-center cursor-pointer shadow-lg hover:bg-gray-100 transition"
-        >
-          <ArrowUp className="text-dark-blue-1" />
-        </div>
+        <>
+          <Tooltip content="Return to top" showArrow={true} color="foreground">
+            <div
+              onClick={scrollToTop}
+              className="fixed bottom-5 right-5 bg-white size-10 rounded-full flex items-center justify-center cursor-pointer shadow-lg hover:bg-gray-100 transition z-[9999999999999999999999999999999999]"
+            >
+              <ArrowUp className="text-dark-blue-1" />
+            </div>
+          </Tooltip>
+        </>
       )}
     </>
   );

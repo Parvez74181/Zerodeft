@@ -1,12 +1,12 @@
 import type { Config } from "tailwindcss";
-import { nextui } from "@nextui-org/react";
+import { heroui } from "@heroui/react";
 
 export default {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
+    "./node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
@@ -25,6 +25,10 @@ export default {
         "dark-blue-1": "#2C277D",
         "dark-blue-2": "#534CB2",
         yellow: "#CB9E5D",
+        "yellow-1": "#FBC349",
+        "yellow-2": "#FFE6A1",
+        "purple-1": "#9C69F2",
+        "purple-2": "#F8D8FB",
       },
       animation: {
         "text-gradient": "text-gradient 6s ease infinite alternate",
@@ -71,5 +75,5 @@ export default {
     },
   },
   darkMode: ["class", "class"],
-  plugins: [nextui(), require("tailwindcss-animate")],
+  plugins: [heroui(), require("tailwindcss-animate")],
 } satisfies Config;

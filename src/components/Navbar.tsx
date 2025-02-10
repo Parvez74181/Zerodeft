@@ -17,7 +17,7 @@ import {
   Divider,
   Accordion,
   AccordionItem,
-} from "@nextui-org/react";
+} from "@heroui/react";
 import Button from "./ui/Button";
 import { useState } from "react";
 import TextHoverShift from "./animation/TextHoverShift";
@@ -151,8 +151,9 @@ const Navbar = () => {
           <NavbarMenuItem>
             <div>
               <div className="text-3xl uppercase mb-3">Services </div>
-              {ourServices.map((service) => (
+              {ourServices.map((service, i) => (
                 <Link
+                  key={i}
                   href={`/services/${service.name.toLowerCase()}`}
                   className="py-1.5  flex items-center gap-2.5 ps-2.5"
                   onClick={() => setIsMenuOpen(false)}

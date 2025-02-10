@@ -10,7 +10,7 @@ import ourServices from "../../../data/OurServices";
 import Reviews from "@/components/Reviews";
 import Features from "../../../data/Features";
 import Counter from "@/components/animation/Counter";
-import { Divider } from "@nextui-org/react";
+import { Divider } from "@heroui/react";
 import CTAContentBlock from "@/components/CTAContentBlock";
 import BookCall from "@/components/BookCall";
 import FAQ from "@/components/FAQ";
@@ -113,7 +113,7 @@ export default function Home() {
                 <Reveal key={i} type={i === 0 || i === 2 ? "left" : "right"} delay={i * 0.2}>
                   <li className="group">
                     <Link
-                      href={""}
+                      href={`/services/${service.name.toLowerCase()}`}
                       className="bg-white-2 p-3 md:p-5 lg:p-10 flex items-center lg:items-start gap-5 rounded-2xl "
                     >
                       <div className="icons flex">

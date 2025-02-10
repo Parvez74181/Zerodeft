@@ -1,5 +1,5 @@
 "use client";
-import { Input, Form, Textarea } from "@nextui-org/react";
+import { Input, Form, Textarea } from "@heroui/react";
 import Button from "./ui/Button";
 import AvatarGroup from "./ui/AvatarGroup";
 import { SendHorizontal, ShieldCheck } from "lucide-react";

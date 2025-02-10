@@ -1,6 +1,6 @@
 "use client";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { Card, CardHeader, CardBody, CardFooter } from "@nextui-org/react";
+import { Card, CardHeader, CardBody, CardFooter } from "@heroui/react";
 import Autoplay from "embla-carousel-autoplay";
 import reviewsData from "../../data/ReviewsData";
 import Ratings from "./Ratings";

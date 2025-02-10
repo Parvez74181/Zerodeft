@@ -5,7 +5,7 @@ import useEmblaCarousel, { type UseEmblaCarouselType } from "embla-carousel-reac
 import { ArrowLeft, ArrowRight } from "lucide-react";
 
 import { cn } from "@/lib/utils";
-import { Button } from "@nextui-org/react";
+import { Button } from "@heroui/react";
 
 type CarouselApi = UseEmblaCarouselType[1];
 type UseCarouselParameters = Parameters<typeof useEmblaCarousel>;
@@ -184,7 +184,7 @@ const CarouselPrevious = React.forwardRef<HTMLButtonElement, React.ComponentProp
           className
         )}
         disabled={!canScrollPrev}
-        onClick={scrollPrev}
+        onPress={scrollPrev}
         {...props}
       >
         <ArrowLeft className="h-4 w-4" />
@@ -212,7 +212,7 @@ const CarouselNext = React.forwardRef<HTMLButtonElement, React.ComponentProps<ty
           className
         )}
         disabled={!canScrollNext}
-        onClick={scrollNext}
+        onPress={scrollNext}
         {...props}
       >
         <ArrowRight className="h-4 w-4" />
