@@ -4,7 +4,7 @@ import FaqData from "../../data/FaqData";
 
 const FAQ = () => {
   const itemClasses = {
-    base: "py-0 w-full",
+    base: "py-3 w-full",
     title: "font-normal text-medium",
     trigger: "px-2 py-0  rounded-lg h-auto my-3 flex items-center *:*:text-xl *:*:",
     indicator: "text-medium text-xl",
@@ -15,7 +15,7 @@ const FAQ = () => {
       {FaqData.map((faq, i) => (
         <AccordionItem key={i} aria-label={faq.title} title={faq.title} className="text-xl">
           <div
-            className="*:list-disc *:list-inside *:space-y-2"
+            className="*:list-disc *:list-inside *:space-y-3"
             dangerouslySetInnerHTML={{ __html: faq.description }}
           />
         </AccordionItem>

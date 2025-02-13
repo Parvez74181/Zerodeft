@@ -1,10 +1,9 @@
-import Button from "@/components/ui/Button";
 import Image from "next/image";
 import HeroBG from "../../../public/home.webp";
 import Reveal from "@/components/animation/Reveal";
 import TextHoverShift from "@/components/animation/TextHoverShift";
 import AvatarGroup from "@/components/ui/AvatarGroup";
-import { BookOpenText, Calendar, MoveUpRight, Zap } from "lucide-react";
+import { BookOpenText, Microscope, MoveUpRight } from "lucide-react";
 import Link from "next/link";
 import ourServices from "../../../data/OurServices";
 import Reviews from "@/components/Reviews";
@@ -46,12 +45,12 @@ export default function Home() {
       </section>
 
       <section id="team" className="flex justify-center items-center py-custom">
-        <div className="section flex md:flex-row flex-col w-full gap-5 md:justify-center items-center">
+        {/* <div className="section flex md:flex-row flex-col w-full gap-5 md:justify-center items-center">
           <Reveal type="left" className="w-full md:w-1/3 md:order-1 order-2 flex items-center p-5 overflow-x-auto">
             <div className="flex md:justify-center items-center flex-row md:flex-col gap-5 md:gap-2">
               <AvatarGroup />
               <p className="text-sm">
-                FOUNDERS OF <br /> SOFT UX
+                FOUNDERS OF <br /> Corax IT
               </p>
             </div>
           </Reveal>
@@ -65,16 +64,62 @@ export default function Home() {
               </h2>
             </Reveal>
           </div>
+        </div> */}
+        <div className="section">
+          <CTAContentBlock
+            disabled
+            btnText="Innovate Together"
+            description="Over the past 5 years, we’ve honed our skills in design and development, and now we’re excited to help passionate founders like you bring your vision to life. After all, success is a team effort. Let’s work together and aim for the top!"
+            icon={<Microscope />}
+          />
         </div>
       </section>
 
       <section id="project-number-showup" className="bg-gradient-to-b from-dark-1 to-dark-2  ">
         <div className="section">
-          <Divider className="h-0.5 rounded-full mb-2.5" />
+          <div className="grid grid-cols-2 sm:grid-cols-5 gap-3 sm:gap-5 *:bg-[rgba(255,255,255,0.05)] *:border *:border-gray-700 *:backdrop-blur-3xl *:w-full *:h-44 *:rounded-xl">
+            <div className="sm:col-span-3 flex justify-center items-center  sm:flex-row flex-col gap-2 sm:gap-5">
+              <div className="mb-2 sm:mb-0">
+                <AvatarGroup />
+              </div>
+              <Divider orientation="vertical" className="sm:h-[50%] h-0.5 w-[50%] rounded-full sm:w-0.5" />
+              <p className="text-center uppercase opacity-70 sm:text-lg">
+                FOUNDERS OF <br /> corax it
+              </p>
+            </div>
+
+            <div className="flex justify-center items-center  sm:flex-row flex-col gap-2 sm:gap-5 sm:col-span-2">
+              <Counter to={500} suffix="+" className="sm:text-3xl text-2xl md:text-4xl lg:text-5xl font-semibold" />
+              <Divider orientation="vertical" className="sm:h-[50%] h-0.5 w-[50%] rounded-full sm:w-0.5" />
+              <p className="text-center uppercase opacity-70 sm:text-lg">
+                Project <br /> completed
+              </p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-5 gap-3 sm:gap-5  *:bg-[rgba(255,255,255,0.05)] *:border *:border-gray-700 *:backdrop-blur3xl *:w-full *:h-44 *:rounded-xl mt-3 sm:mt-5">
+            <div className="sm:col-span-2 flex justify-center items-center sm:flex-row flex-col gap-2 sm:gap-5">
+              <Counter to={25} suffix="+" className="sm:text-3xl text-2xl md:text-4xl lg:text-5xl font-semibold" />
+              <Divider orientation="vertical" className="sm:h-[50%] h-0.5 w-[50%] rounded-full sm:w-0.5" />
+              <p className="text-center uppercase opacity-70 sm:text-lg">
+                happy <br /> client
+              </p>
+            </div>
+
+            <div className="flex justify-center items-center  gap-2 sm:gap-5 sm:flex-row flex-col sm:col-span-3">
+              <Counter to={5} suffix="+" className="sm:text-3xl text-2xl md:text-4xl lg:text-5xl font-semibold" />
+              <Divider orientation="vertical" className="sm:h-[50%] h-0.5 w-[50%] rounded-full sm:w-0.5" />
+              <p className="text-center uppercase opacity-70 sm:text-lg">
+                Year <br /> Experience
+              </p>
+            </div>
+          </div>
+
+          {/* <Divider className="h-0.5 rounded-full mb-2.5" />
           <div className="grid grid-cols-3">
             <Reveal type="bottom" delay={0.2}>
               <div className="flex justify-center items-center flex-col gap-1">
-                <Counter to={1000} suffix="+" className="sm:text-3xl text-2xl md:text-4xl lg:text-5xl font-semibold" />
+                <Counter to={500} suffix="+" className="sm:text-3xl text-2xl md:text-4xl lg:text-5xl font-semibold" />
                 <p className="text-center uppercase opacity-70">
                   Project <br /> completed
                 </p>
@@ -91,22 +136,24 @@ export default function Home() {
             </Reveal>
             <Reveal type="bottom" delay={0.6}>
               <div className="flex justify-center items-center flex-col gap-1">
-                <Counter to={3} suffix="+" className="sm:text-3xl text-2xl md:text-4xl lg:text-5xl font-semibold" />
+                <Counter to={5} suffix="+" className="sm:text-3xl text-2xl md:text-4xl lg:text-5xl font-semibold" />
                 <p className="text-center uppercase opacity-70">
                   Year <br /> Experience
                 </p>
               </div>
             </Reveal>
           </div>
-          <Divider className="h-0.5 rounded-full mt-2.5" />
+          <Divider className="h-0.5 rounded-full mt-2.5" /> */}
         </div>
       </section>
 
       <section id="our-services" className="bg-gradient-to-b from-dark-2 to-dark-blue-1 py-custom">
         <div className="relative section">
-          <div className="text-dark relative p-3 md:p-5 lg:p-10 bg-white rounded-custom">
+          <div className="text-dark relative p-3 md:p-5 lg:p-10 bg-white rounded-custom ">
             <Reveal type="top">
-              <h2 className="sm:text-6xl text-5xl md:text-7xl lg:text-9xl font-semibold uppercase">our services</h2>
+              <h2 className="sm:text-6xl text-5xl md:text-7xl lg:text-9xl font-semibold uppercase">
+                our <br /> services
+              </h2>
             </Reveal>
 
             <ul className="w-full grid md:grid-cols-2 gap-2 md:gap-5 mt-3 md:mt-10">
@@ -147,7 +194,7 @@ export default function Home() {
       <section id="hot-article" className="bg-gradient-to-b from-dark-blue-1 to-dark-blue-1">
         <CTAContentBlock
           btnText="hot article"
-          description="The Soft UX blog is a rich resource filled with technical insights and expert knowledge. Explore valuable tips, industry secrets, and the latest IT trends to stay ahead in the ever-evolving tech world."
+          description="The Corax IT blog is a rich resource filled with technical insights and expert knowledge. Explore valuable tips, industry secrets, and the latest IT trends to stay ahead in the ever-evolving tech world."
           icon={<BookOpenText />}
         />
       </section>

@@ -15,7 +15,7 @@ const questrial = Questrial({
 });
 
 export const metadata: Metadata = {
-  title: "SOFT UX IT Agency",
+  title: "CORAX IT Agency",
   description: "Professional web development and online marketing services",
 };
 export const viewport: Viewport = {
