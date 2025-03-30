@@ -56,7 +56,7 @@ const Navbar = () => {
           <NavbarBrand>
             <Link href="/" className="sm:text-xl text-lg font-bold text-inherit flex items-center gap-1">
               <CodeXml className="size-7" strokeWidth={2.5} />
-              Soft Ux
+              Zerodeft
             </Link>
           </NavbarBrand>
         </NavbarContent>
@@ -66,7 +66,7 @@ const Navbar = () => {
           <NavbarBrand>
             <Link href="/" className="sm:text-xl text-lg font-bold text-inherit flex items-center gap-1">
               <CodeXml className="size-7" strokeWidth={2.5} />
-              Soft Ux
+              Zerodeft
             </Link>
           </NavbarBrand>
         </NavbarContent>

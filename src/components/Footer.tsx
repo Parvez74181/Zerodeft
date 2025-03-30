@@ -32,13 +32,13 @@ const Footer = () => {
               <div className="w-full flex lg:flex-row flex-col items-center lg:justify-between">
                 <div className="w-full lg:w-auto">
                   <h3 className="text-xl uppercase opacity-50">Drop us a line</h3>
-                  <p>info@gmail.com</p>
+                  <Link href="mailto:mdpo20479@gmail.com@gmail.com">mdpo20479@gmail.com@gmail.com</Link>
                 </div>
                 <Divider orientation="vertical" className="h-10 w-0.5 rounded-full hidden lg:block" />
                 <Divider className="h-0.5 rounded-full  lg:hidden" />
                 <div className="w-full lg:w-auto">
                   <h3 className="text-xl uppercase opacity-50">Call Us</h3>
-                  <p>01xxxxxxxxxxxxxx</p>
+                  <Link href="tell:+8801580678924">+880 1580-678924</Link>
                 </div>
               </div>
             </div>
@@ -77,7 +77,7 @@ const Footer = () => {
           <Divider className="w-full h-0.5 rounded-full mb-3" />
           <div className="px-4 py-6  flex items-center justify-center md:flex-row flex-col md:justify-between">
             <span className="opacity-60 text-white-1 sm:text-center">
-              © {`${date}`} <Link href="/">Flowbite™</Link>. All Rights Reserved.
+              © {`${date}`} <Link href="/">Zerodeft™</Link>. All Rights Reserved.
             </span>
             <div className="flex mt-4 sm:justify-center md:mt-0 space-x-5 rtl:space-x-reverse">
               <Link

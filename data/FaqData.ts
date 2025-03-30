@@ -1,8 +1,8 @@
 const FaqData = [
   {
-    title: "What are the benefits of working with Corax IT’s dedicated teams?",
+    title: "What are the benefits of working with Zerodeft dedicated teams?",
     description: `
-      <p>Working with Corax IT’s dedicated teams offers several benefits, including:</p>
+      <p>Working with Zerodeft dedicated teams offers several benefits, including:</p>
       <ul>
         <li><strong>Tailored solutions:</strong> Our dedicated team crafts web solutions that align perfectly with your vision, from intricate designs to smooth functionality.</li>
         <li><strong>Client-first approach:</strong> We’re not just service providers; we’re partners in your journey, committed to delivering value at every step.</li>
@@ -14,7 +14,7 @@ const FaqData = [
   {
     title: "What industries can benefit from a dedicated team approach?",
     description: `
-      <p>Corax IT's dedicated teams have experience across various industries, including but not limited to technology, e-commerce, finance, healthcare, and more. We adapt our expertise to suit your specific industry needs.</p>
+      <p>Zerodeft dedicated teams have experience across various industries, including but not limited to technology, e-commerce, finance, healthcare, and more. We adapt our expertise to suit your specific industry needs.</p>
     `,
   },
   {
@@ -36,9 +36,9 @@ const FaqData = [
     `,
   },
   {
-    title: "Why should I choose Corax IT for a dedicated team?",
+    title: "Why should I choose Zerodeft for a dedicated team?",
     description: `
-      <p>Corax IT combines industry expertise with a client-first approach, ensuring tailored solutions, adherence to deadlines, and flexible strategies. Our goal is to empower businesses by simplifying processes, saving costs, and delivering exceptional results.</p>
+      <p>Zerodeft combines industry expertise with a client-first approach, ensuring tailored solutions, adherence to deadlines, and flexible strategies. Our goal is to empower businesses by simplifying processes, saving costs, and delivering exceptional results.</p>
     `,
   },
 ];

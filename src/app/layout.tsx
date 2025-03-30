@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 import CursorMask from "@/components/animation/CursorMask";
 import Cursor from "@/components/Cursor";
 import ReturnToTop from "@/components/ReturnToTop";
+import { ModalProvider } from "@/context/modalContext";
 
 const questrial = Questrial({
   variable: "--font-questrial",
@@ -15,7 +16,7 @@ const questrial = Questrial({
 });
 
 export const metadata: Metadata = {
-  title: "CORAX IT Agency",
+  title: "ZERODEFT Agency",
   description: "Professional web development and online marketing services",
 };
 export const viewport: Viewport = {

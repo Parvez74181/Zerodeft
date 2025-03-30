@@ -3,12 +3,14 @@ import { cn } from "@/lib/utils";
 import { Button as ButtonUI, ModalHeader } from "@heroui/react";
 import { Modal, ModalContent, ModalBody, useDisclosure } from "@heroui/react";
 import ContactForm from "../ContactForm";
+import { useEffect } from "react";
 
 type ButtonProps = {
   text?: string;
   isLoading?: boolean;
   disabled?: boolean;
   showDialog?: boolean;
+
   className?: string;
   children?: React.ReactNode;
   radius?: "full" | "none" | "sm" | "md" | "lg";
@@ -33,7 +35,7 @@ const Button = ({
   id,
   onPress,
 }: ButtonProps) => {
-  const { isOpen, onOpen, onOpenChange } = useDisclosure();
+  const { isOpen, onOpen, onOpenChange, onClose } = useDisclosure();
 
   const handlePress = () => {
     if (showDialog) {

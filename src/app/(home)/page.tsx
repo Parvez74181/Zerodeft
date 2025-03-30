@@ -50,7 +50,7 @@ export default function Home() {
             <div className="flex md:justify-center items-center flex-row md:flex-col gap-5 md:gap-2">
               <AvatarGroup />
               <p className="text-sm">
-                FOUNDERS OF <br /> Corax IT
+                FOUNDERS OF <br /> Zerodeft IT
               </p>
             </div>
           </Reveal>
@@ -84,7 +84,7 @@ export default function Home() {
               </div>
               <Divider orientation="vertical" className="sm:h-[50%] h-0.5 w-[50%] rounded-full sm:w-0.5" />
               <p className="text-center uppercase opacity-70 sm:text-lg">
-                FOUNDERS OF <br /> corax it
+                FOUNDERS OF <br /> Zerodeft it
               </p>
             </div>
 
@@ -194,7 +194,7 @@ export default function Home() {
       <section id="hot-article" className="bg-gradient-to-b from-dark-blue-1 to-dark-blue-1">
         <CTAContentBlock
           btnText="hot article"
-          description="The Corax IT blog is a rich resource filled with technical insights and expert knowledge. Explore valuable tips, industry secrets, and the latest IT trends to stay ahead in the ever-evolving tech world."
+          description="The Zerodeft IT blog is a rich resource filled with technical insights and expert knowledge. Explore valuable tips, industry secrets, and the latest IT trends to stay ahead in the ever-evolving tech world."
           icon={<BookOpenText />}
         />
       </section>
