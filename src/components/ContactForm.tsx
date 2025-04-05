@@ -65,7 +65,7 @@ const ContactForm = () => {
           <Button
             isLoading={isLoading}
             type="submit"
-            className="uppercase bg-white w-auto px-6 sm:h-14 sm:w-64 font-xl font-bold"
+            className="uppercase bg-white w-auto px-5 sm:h-14 sm:w-64 font-xl font-bold"
           >
             <TextHoverShift>
               <span className=" flex items-center justify-center gap-2">

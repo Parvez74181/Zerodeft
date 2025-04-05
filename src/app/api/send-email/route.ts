@@ -4,7 +4,7 @@ import nodemailer from "nodemailer";
 
 export async function POST(req: Request) {
   try {
-    const { fullName, email: to, phone, subject, aboutProject: message } = await req.json();
+    const { fullName, email, phone, subject, aboutProject: message } = await req.json();
 
     const transporter = nodemailer.createTransport({
       service: "gmail",
@@ -16,11 +16,11 @@ export async function POST(req: Request) {
 
     const mailOptions = {
       from: process.env.EMAIL_USER,
-      to,
+      to: "mdp020479@gmail.com,tanjil98402080@gmail.com,zerodeft01@gmail.com",
       subject: subject || "Schedule a Consultation",
       html: `
       <div><strong>Name: </strong>${fullName}</div>
-      <div><strong>Email: </strong>${to}</div>
+      <div><strong>Email: </strong>${email}</div>
       <div><strong>Phone: </strong>${phone}</div>
       <div><strong>Message: </strong>${message}</div>
       `,
@@ -30,6 +30,8 @@ export async function POST(req: Request) {
 
     return NextResponse.json({ success: true, info }, { status: 200 });
   } catch (error) {
+    console.log(error);
+
     return NextResponse.json({ success: false, error }, { status: 500 });
   }
 }
